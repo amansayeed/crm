@@ -1,0 +1,1 @@
+$whereCase = " AND ((division = '".$_SESSION['userGroup']."' And userId NOT IN (select userId from admin_login where userType = '7')) OR assignedTo = '".$_SESSION['userId']."')";

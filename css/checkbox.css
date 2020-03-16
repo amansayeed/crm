@@ -1,0 +1,46 @@
+.squaredOne {
+  width: 19px;
+  height: 19px;
+  position: relative;
+  border:1px solid #ebebeb;
+  border-radius:5px;
+  background:#ebebeb;
+}
+
+.squaredOne label {
+width: 10px;
+height: 10px;
+position: absolute;
+top: 3px;
+left: 3px;
+cursor: pointer;
+border: 1px solid #7acdc8;
+border-radius:2px;
+padding:0px;
+background:#fff;
+text-align:left;
+}
+
+.squaredOne label:after {
+content: '';
+width: 10px;
+height: 10px;
+position: absolute;
+background: #7acdc8;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+}
+.squaredOne label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+.squaredOne input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredOne input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.edit_checkbox  { width:20%; float:left; padding:5px; height:30px; }
+.flt_left { float:left; }
+.checkbox_name { float:left; padding-left:10px; }
